@@ -2,9 +2,13 @@
 
 `BE SORT` is an sorting algorithm and implemented using C Language.
 
+---
+
 ## WHY I CREATED IT ?
 
 When i was studying `quick sort` it blew my mind. I don't know whether this algorithm is already been created but this idea just came to my mind and i implemented it with my favorite tool / programming language C. At first i had a different approch but over the course of implementation of algorithm it changed. I already created another sorting program know as `MAXDELETE SORT` if you haven't seen it check it out [here](https://github.com/dev-shadoww/maxDeleteSort).
+
+---
 
 ## HOW IT WORKS ?
 
@@ -35,6 +39,10 @@ Finally we get sorted list.
 ###### IMAGE 5 :
 
 ![IMAGE 5](Images/5.png)
+
+It doesn't use the **i** and **j** values to terminate the loop for that reason it has specific variables. So for more information check out the code.
+
+---
 
 ## OUTPUT :
 
