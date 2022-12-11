@@ -1,7 +1,7 @@
-/*
->>  AUTHOR : SHADOWW
->>  LAST MODIFIED : 13 / 11 / 2022
-*/
+//
+// AUTHOR : SHADOWW
+// LAST MODIFIED : 13 / 11 / 2022
+//
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -9,10 +9,9 @@
 
 void besort();
 
-int arr[MAX], number_of_elements;
+int arr[MAX], numberOfElements;
 bool stage = false;
 
-//////////////////////////////
 int main()
 {
   int i;
@@ -20,33 +19,33 @@ int main()
   printf("| BE SORT |\n");
   printf("===========\n");
   printf("How many numbers 🔢 do you wanna sort ? : ");
-  scanf("%d", &number_of_elements);
+  scanf("%d", &numberOfElements);
   printf("Ok, got it now please enter the numbers 👇,\n> ");
-  for (i = 0; i < number_of_elements; i++)
+  for (i = 0; i < numberOfElements; i++)
     scanf("%d", &arr[i]);
   besort();
   printf("\nHere are the sorted numbers 👇,\n> ");
-  for (i = 0; i < number_of_elements; i++)
+  for (i = 0; i < numberOfElements; i++)
     printf("%d ", arr[i]);
   printf("\n");
   return 0;
 }
 
-//////////////////////////////
+// The sorting is done in two stages.
 void besort()
 {
-  int i, j, k, tempElement, repeatElement, indexNumber, countNumber = 0, pointElementI, pointElementJ;
+  int i, j, k, tempElement, runLoopFor, indexNumber, countNumber = 0, pointToI, pointToJ;
   for (k = 0; k < 2; k++)
   {
     countNumber = 0;
-    repeatElement = (1 + number_of_elements) / 2;
-    pointElementI = 0;
-    pointElementJ = number_of_elements - 1;
-    i = pointElementI;
-    j = pointElementJ;
-    while (pointElementI != pointElementJ)
+    runLoopFor = (1 + numberOfElements) / 2;
+    pointToI = 0;
+    pointToJ = numberOfElements - 1;
+    i = pointToI;
+    j = pointToJ;
+    while (pointToI != pointToJ)
     {
-      for (indexNumber = 0; indexNumber < repeatElement; indexNumber++)
+      for (indexNumber = 0; indexNumber < runLoopFor; indexNumber++)
       {
         if (i == j)
           arr[i] = arr[j];
@@ -60,16 +59,14 @@ void besort()
         j--;
       }
       if (!stage)
-        pointElementJ -= 1;
+        pointToJ -= 1;
       else
-        pointElementI += 1;
-      i = pointElementI;
-      j = pointElementJ;
+        pointToI += 1;
+      i = pointToI;
+      j = pointToJ;
       countNumber += 1;
-      if (countNumber % 2 != 0 && number_of_elements % 2 != 0) // n IS ODD
-        repeatElement -= 1;
-      else if (countNumber % 2 == 0 && number_of_elements % 2 == 0) // n IS EVEN
-        repeatElement -= 1;
+      if ((countNumber % 2 != 0 && numberOfElements % 2 != 0) || (countNumber % 2 == 0 && numberOfElements % 2 == 0)) // n Is Even or n Is Odd
+        runLoopFor -= 1;
     }
     stage = true;
   }
