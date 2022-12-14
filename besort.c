@@ -1,73 +1,65 @@
-//
-// AUTHOR : SHADOWW
-// LAST MODIFIED : 13 / 11 / 2022
-//
+/*
+// Written By Shadoww
+// Github http://github.com/dev-shadoww
+*/
 
 #include <stdio.h>
-#include <stdbool.h>
-#define MAX 20
+#define MAX 50
 
-void besort();
-
-int arr[MAX], numberOfElements;
-bool stage = false;
+void beSort(int arr[MAX], int);
 
 int main()
 {
-  int i;
-  printf("===========\n");
-  printf("| BE SORT |\n");
-  printf("===========\n");
+  int arr[MAX];
+  int indexI, indexJ, numberOfElements;
   printf("How many numbers 🔢 do you wanna sort ? : ");
   scanf("%d", &numberOfElements);
+
   printf("Ok, got it now please enter the numbers 👇,\n> ");
-  for (i = 0; i < numberOfElements; i++)
-    scanf("%d", &arr[i]);
-  besort();
+  for (indexI = 0; indexI < numberOfElements; indexI++)
+    scanf("%d", &arr[indexI]);
+
+  beSort(arr, numberOfElements);
+
   printf("\nHere are the sorted numbers 👇,\n> ");
-  for (i = 0; i < numberOfElements; i++)
-    printf("%d ", arr[i]);
+  for (indexI = 0; indexI < numberOfElements; indexI++)
+    printf("%d ", arr[indexI]);
   printf("\n");
   return 0;
 }
 
-// The sorting is done in two stages.
-void besort()
+void beSort(int arr[MAX], int numberOfElements)
 {
-  int i, j, k, tempElement, runLoopFor, indexNumber, countNumber = 0, pointToI, pointToJ;
-  for (k = 0; k < 2; k++)
+  int numberOfComparisons, pointToI, pointToJ, movI, movJ, tempElement, stage = 0, remainingElements;
+
+  for (int indexI = 0; indexI < 2; indexI++)
   {
-    countNumber = 0;
-    runLoopFor = (1 + numberOfElements) / 2;
     pointToI = 0;
     pointToJ = numberOfElements - 1;
-    i = pointToI;
-    j = pointToJ;
-    while (pointToI != pointToJ)
+    remainingElements = numberOfElements;
+
+    for (int i = 0; i < numberOfElements; i++)
     {
-      for (indexNumber = 0; indexNumber < runLoopFor; indexNumber++)
+      movI = pointToI;
+      movJ = pointToJ;
+      numberOfComparisons = (remainingElements / 2);
+      for (int j = 0; j < numberOfComparisons; j++)
       {
-        if (i == j)
-          arr[i] = arr[j];
-        else if (arr[i] > arr[j])
+        if (arr[movI] > arr[movJ])
         {
-          tempElement = arr[i];
-          arr[i] = arr[j];
-          arr[j] = tempElement;
+          tempElement = arr[movI];
+          arr[movI] = arr[movJ];
+          arr[movJ] = tempElement;
         }
-        i++;
-        j--;
+        movI++;
+        movJ--;
       }
       if (!stage)
         pointToJ -= 1;
       else
         pointToI += 1;
-      i = pointToI;
-      j = pointToJ;
-      countNumber += 1;
-      if ((countNumber % 2 != 0 && numberOfElements % 2 != 0) || (countNumber % 2 == 0 && numberOfElements % 2 == 0)) // n Is Even or n Is Odd
-        runLoopFor -= 1;
+      remainingElements -= 1;
     }
-    stage = true;
+    stage = 1;
   }
 }
