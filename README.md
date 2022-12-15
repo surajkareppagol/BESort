@@ -8,6 +8,14 @@ There are two pointers (Not actual C pointers, just normal variables) `pointElem
 
 To explain this i have created these 👇, the **red** colored star indicates a new stage within the main stage, at this stage `i` again points to it's initial value, but `j` is decremented in first stage and vice versa.
 
+## How to use it ?
+
+You can use this program in your projects to sort numbers, if you want to test it pass `-t` option.
+
+```bash
+./besort -t
+```
+
 ### Stage One
 
 ![besort_1](images/besort_1.png)

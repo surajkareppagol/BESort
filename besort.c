@@ -4,14 +4,26 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
 #define MAX 50
 
 void beSort(int arr[MAX], int);
+void test();
 
-int main()
+int main(int argc, char *argv[])
 {
   int arr[MAX];
   int indexI, indexJ, numberOfElements;
+  srand(time(NULL));
+
+  if (strcmp(argv[1], "-t") == 0)
+  {
+    test();
+    return 0;
+  }
+
   printf("How many numbers 🔢 do you wanna sort ? : ");
   scanf("%d", &numberOfElements);
 
@@ -62,4 +74,26 @@ void beSort(int arr[MAX], int numberOfElements)
     }
     stage = 1;
   }
+}
+
+void test()
+{
+  int testCases[1000];
+
+  for (int i = 0; i < 1000; i++)
+  {
+    testCases[i] = rand() % (20000 - 100 + 1) + 100;
+  }
+
+  printf("\nHere are the numbers before sorting 👇,\n> ");
+  for (int i = 0; i < 1000; i++)
+    printf("%d ", testCases[i]);
+  printf("\n");
+
+  printf("------------------------------\n");
+  beSort(testCases, 1000);
+  printf("\nHere are the sorted numbers 👇,\n> ");
+  for (int i = 0; i < 1000; i++)
+    printf("%d ", testCases[i]);
+  printf("\n");
 }
