@@ -16,6 +16,10 @@ You can use this program in your projects to sort numbers, if you want to test i
 ./besort -t
 ```
 
+## Is it better ?
+
+I have tested it for 1000 random numbers and it took about `0.002498` and when compared to quick sort it took `0.000580`.
+
 ### Stage One
 
 ![besort_1](images/besort_1.png)
