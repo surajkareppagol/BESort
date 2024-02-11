@@ -1,6 +1,8 @@
 # BE Sort
 
-A sorting algorithm inspired by **quick sort**.This program is created in **C** language.
+A 📶 sorting algorithm inspired by **quick sort**.This program is created in **C** language.
+
+![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_output.png)
 
 ## How it works ?
 
@@ -18,24 +20,20 @@ You can use this program in your projects to sort numbers, if you want to test i
 
 ## Is it better ?
 
-I have tested it for 1000 random numbers and it took about `0.002498` and when compared to quick sort it took `0.000580`.
+I have tested it for different set of random numbers, for 1000, it took about `0.002498` and quick sort took about `0.000580`.
 
 ### Stage One
 
-![besort_1](images/besort_1.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_1.png)
 
-![besort_2](images/besort_2.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_2.png)
 
-![besort_3](images/besort_3.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_3.png)
 
 ### Stage Two
 
-![besort_4](images/besort_4.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_4.png)
 
-![besort_5](images/besort_5.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_5.png)
 
-![besort_6](images/besort_6.png)
-
-## Output
-
-![besort_output](images/besort_output.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_6.png)
