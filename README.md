@@ -2,7 +2,7 @@
 
 A 📶 sorting algorithm inspired by **quick sort**.This program is created in **C** language.
 
-![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_output.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/Project-Assets/main/BESort/BESort%20Output.png)
 
 ## How it works ?
 
@@ -24,16 +24,16 @@ I have tested it for different set of random numbers, for 1000, it took about `0
 
 ### Stage One
 
-![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_1.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/Project-Assets/main/BESort/BESort%20A.png)
 
-![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_2.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/Project-Assets/main/BESort/BESort%20B.png)
 
-![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_3.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/Project-Assets/main/BESort/BESort%20C.png)
 
 ### Stage Two
 
-![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_4.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/Project-Assets/main/BESort/BESort%20D.png)
 
-![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_5.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/Project-Assets/main/BESort/BESort%20E.png)
 
-![BESort](https://raw.githubusercontent.com/surajkareppagol/assets-for-projects/main/BESort/besort_6.png)
+![BESort](https://raw.githubusercontent.com/surajkareppagol/Project-Assets/main/BESort/BESort%20F.png)
